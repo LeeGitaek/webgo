@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"webgo/handlers"
 	//"github.com/graphql-go/graphql"
-	//"encoding/json"
+	//"encoding/j
 )
 
 func main() {
@@ -75,12 +75,13 @@ func initDB(filepath string) *sql.DB {
 }
 
 func migrate(db *sql.DB) {
-	sql := `CREATE TABLE IF NOT EXISTS tasks(
-        id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-        name VARCHAR NOT NULL );`
+	sql := `
+	CREATE TABLE IF NOT EXISTS tasks(
+		id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+		name VARCHAR NOT NULL
+	);`
 
 	_, err := db.Exec(sql)
-
 	// Exit if something goes wrong with our SQL statement above
 	if err != nil {
 		panic(err)

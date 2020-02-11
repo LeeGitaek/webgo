@@ -2,10 +2,12 @@ package handlers
 
 import (
 	"database/sql"
-	"github.com/labstack/echo"
 	"net/http"
 	"strconv"
+
 	"webgo/models"
+
+	"github.com/labstack/echo"
 )
 
 type H map[string]interface{}
@@ -13,7 +15,6 @@ type H map[string]interface{}
 // GetTasks endpoint
 func GetTasks(db *sql.DB) echo.HandlerFunc {
 	return func(c echo.Context) error {
-		// Fetch tasks using our new model
 		return c.JSON(http.StatusOK, models.GetTasks(db))
 	}
 }
@@ -30,9 +31,10 @@ func PutTask(db *sql.DB) echo.HandlerFunc {
 		// Return a JSON response if successful
 		if err == nil {
 			return c.JSON(http.StatusCreated, H{
-				"created": 123,
+				"created": id,
 			})
-		} else { // Handle any errors
+			// Handle any errors
+		} else {
 			return err
 		}
 	}
@@ -46,10 +48,11 @@ func DeleteTask(db *sql.DB) echo.HandlerFunc {
 		_, err := models.DeleteTask(db, id)
 		// Return a JSON response on success
 		if err == nil {
-			return c.JSON(http.StatusCreated, H{
+			return c.JSON(http.StatusOK, H{
 				"deleted": id,
 			})
-		} else { // Handle errors
+			// Handle errors
+		} else {
 			return err
 		}
 	}
