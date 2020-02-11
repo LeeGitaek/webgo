@@ -1,10 +1,9 @@
 # webgo
-Echo framework , web development using golang
-This is a todo web app written in Go and Vue.js,Echo Framework
+##### Echo framework , web development using golang
+##### This is a todo web app written in Go and Vue.js,Echo Framework
 
 ### Run
--------------------------
-
+  -----------------------
   go get github.com/labstack/echo
 
 
@@ -12,8 +11,7 @@ This is a todo web app written in Go and Vue.js,Echo Framework
 
 
   go run main.go
-  
--------------------------
+  ------------------------
 
 ##### your browser to http://localhost:1323 <br>
 
