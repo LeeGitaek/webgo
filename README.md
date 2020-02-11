@@ -8,4 +8,6 @@ Run
 go get github.com/mattn/go-sqlite3 <br>
 go run main.go
 
-your browser to http://localhost:1323
+your browser to http://localhost:1323 <br>
+
+Result image : https://github.com/LeeGitaek/webgo/issues/2
