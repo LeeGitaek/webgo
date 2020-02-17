@@ -1,4 +1,4 @@
-# webgo
+# webgo   [![Go Report Card](https://goreportcard.com/badge/github.com/LeeGitaek/webgo)](https://goreportcard.com/report/github.com/LeeGitaek/webgo)
 ##### Echo framework , web development using golang
 ##### This is a todo web app written in Go and Vue.js,Echo Framework
 
